@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="title desc">
+  <title id="title">Water leak - provider matching</title>
+  <desc id="desc">A resident calls for help after a pipe leaks, while a plumber approaches the house.</desc>
+  <rect width="800" height="500" fill="#d0eaff"/>
+  <circle cx="686" cy="70" r="36" fill="#fff2ac"/>
+  <path d="M0 308 Q210 284 397 306 T800 299 V500 H0Z" fill="#d5ead8"/>
+  <path d="M70 198 L255 55 440 198" fill="none" stroke="#7298b8" stroke-width="21" stroke-linejoin="round"/>
+  <path d="M91 190 L255 70 419 190 V350 H91Z" fill="#fffaf5" stroke="#698baa" stroke-width="4"/>
+  <rect x="128" y="210" width="88" height="72" rx="4" fill="#a5d4ed" stroke="#6287a4" stroke-width="5"/>
+  <path d="M172 210 V282" stroke="#eefaff" stroke-width="5"/>
+  <rect x="290" y="225" width="65" height="125" fill="#a67d66"/>
+  <circle cx="338" cy="275" r="4" fill="#ffe6aa"/>
+  <path d="M115 346 H348" stroke="#5e7891" stroke-width="9" stroke-linecap="round"/>
+  <path d="M170 346 V380 H250" fill="none" stroke="#748e9a" stroke-width="12" stroke-linecap="round"/>
+  <path d="M250 378 q25 -10 32 7" fill="none" stroke="#5ba5d6" stroke-width="7" stroke-linecap="round"/>
+  <path d="M282 385 q-12 18 -4 26 m20 -19 q-12 20 -4 28" fill="none" stroke="#3e9bd2" stroke-width="6" stroke-linecap="round"/>
+  <g transform="translate(490 183)">
+    <circle cx="0" cy="22" r="18" fill="#ab7152"/>
+    <path d="M-17 16 q18 -22 35 0" fill="#283d53"/>
+    <path d="M-18 50 Q0 39 18 50 L25 124 H-24Z" fill="#e5a54c"/>
+    <path d="M-20 65 -49 102 M19 65 44 89" stroke="#ab7152" stroke-width="11" stroke-linecap="round"/>
+    <rect x="40" y="86" width="12" height="26" rx="3" fill="#344e66"/>
+    <path d="M-12 125 -17 185 M12 125 17 185" stroke="#2a3d56" stroke-width="14" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(675 188)">
+    <circle cx="0" cy="22" r="18" fill="#c88858"/>
+    <path d="M-22 13 q22 -24 44 0" fill="#f8bc43"/>
+    <path d="M-19 51 Q0 40 19 51 L24 125 H-24Z" fill="#2774a4"/>
+    <path d="M-22 67 -44 98 M22 67 43 99" stroke="#c88858" stroke-width="11" stroke-linecap="round"/>
+    <path d="M-12 126 -16 185 M12 126 16 185" stroke="#25384e" stroke-width="14" stroke-linecap="round"/>
+    <rect x="-42" y="91" width="31" height="28" rx="4" fill="#f5b644" stroke="#9b6b29" stroke-width="3"/>
+  </g>
+  <path d="M0 434 H800 V500 H0Z" fill="#8194ab"/>
+  <path d="M0 462 H800" stroke="#f6f8fa" stroke-width="5" stroke-dasharray="42 22"/>
+  <rect x="431" y="76" width="260" height="57" rx="15" fill="#fff" stroke="#c9d9e7"/>
+  <text x="448" y="99" fill="#2d5479" font-family="Arial,sans-serif" font-size="16">“Pipe eka kadila, water yanawa!”</text>
+  <text x="448" y="119" fill="#98782d" font-family="Arial,sans-serif" font-size="11">PLUMBING HELP</text>
+<g aria-hidden="true"><path d="M258 250 Q420 140 675 265" fill="none" stroke="#376db3" stroke-width="7" stroke-linecap="round" stroke-dasharray="12 12"/><circle cx="258" cy="250" r="13" fill="#e8f3ff" stroke="#376db3" stroke-width="5"/><circle cx="675" cy="265" r="13" fill="#e8f3ff" stroke="#376db3" stroke-width="5"/><rect x="416" y="67" width="344" height="100" rx="18" fill="#fff" opacity=".96" stroke="#c4d8e7" stroke-width="2"/><path d="M442 113 L470 96 L470 130 Z" fill="none" stroke="#375ca5" stroke-width="3"/><circle cx="442" cy="113" r="7" fill="#375ca5"/><circle cx="470" cy="96" r="7" fill="#375ca5"/><circle cx="470" cy="130" r="7" fill="#375ca5"/><text x="490" y="109" fill="#375ca5" font-family="Arial,sans-serif" font-size="17" font-weight="700">PROVIDER MATCHING</text><text x="490" y="135" fill="#526e85" font-family="Arial,sans-serif" font-size="14">Context, distance and availability</text></g>
+</svg>

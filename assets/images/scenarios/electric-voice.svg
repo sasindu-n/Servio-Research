@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="title desc">
+  <title id="title">Electrical repair - voice request</title>
+  <desc id="desc">A resident needs an electrician for a broken household switch.</desc>
+  <rect width="800" height="500" fill="#d1eaff"/>
+  <circle cx="676" cy="72" r="36" fill="#fff1aa"/>
+  <path d="M0 302 Q218 282 392 304 T800 300 V500 H0Z" fill="#d9ecd9"/>
+  <path d="M67 197 L255 56 442 197" fill="none" stroke="#7398b7" stroke-width="21" stroke-linejoin="round"/>
+  <path d="M90 188 L255 69 420 188 V349 H90Z" fill="#fffaf5" stroke="#6b8ba8" stroke-width="4"/>
+  <rect x="126" y="207" width="92" height="74" rx="4" fill="#abd4ed" stroke="#6689a6" stroke-width="5"/>
+  <path d="M172 207 V281" stroke="#edfaff" stroke-width="5"/>
+  <rect x="284" y="220" width="66" height="129" fill="#a97f66"/>
+  <circle cx="336" cy="268" r="4" fill="#ffe9ad"/>
+  <rect x="368" y="201" width="42" height="56" rx="3" fill="#607c92"/>
+  <path d="M391 207 l-12 24 h12 l-8 20 19-27 h-13 l8-17" fill="#f3cf65"/>
+  <g transform="translate(498 185)">
+    <circle cx="0" cy="21" r="18" fill="#a56e50"/>
+    <path d="M-18 13 q18 -22 36 0" fill="#2a4053"/>
+    <path d="M-19 50 Q0 38 19 50 L26 123 H-26Z" fill="#e8a74d"/>
+    <path d="M-20 66 -45 107 M21 66 48 92" stroke="#a56e50" stroke-width="11" stroke-linecap="round"/>
+    <rect x="43" y="88" width="13" height="24" rx="3" fill="#2e455e"/>
+    <path d="M-12 123 -17 188 M12 123 17 188" stroke="#293c54" stroke-width="14" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(684 185)">
+    <circle cx="0" cy="21" r="18" fill="#c78659"/>
+    <path d="M-22 11 q22 -24 44 0" fill="#f5ba42"/>
+    <path d="M-19 50 Q0 39 19 50 L26 123 H-26Z" fill="#2577aa"/>
+    <path d="M-21 67 -43 104 M21 67 47 100" stroke="#c78659" stroke-width="11" stroke-linecap="round"/>
+    <path d="M-12 123 -17 188 M12 123 17 188" stroke="#283a52" stroke-width="14" stroke-linecap="round"/>
+    <path d="M-37 103 l12 -15 8 11 -12 15" fill="#6a8a9f"/>
+  </g>
+  <path d="M0 433 H800 V500 H0Z" fill="#8295aa"/>
+  <path d="M0 461 H800" stroke="#f6f8fa" stroke-width="5" stroke-dasharray="42 22"/>
+  <rect x="409" y="80" width="240" height="58" rx="15" fill="#fff" stroke="#c9d9e7"/>
+  <text x="425" y="103" fill="#2d5479" font-family="Arial,sans-serif" font-size="16">“Switch eka wada na!”</text>
+  <text x="425" y="123" fill="#98782d" font-family="Arial,sans-serif" font-size="11">ELECTRICAL REPAIR</text>
+<g aria-hidden="true"><circle cx="498" cy="265" r="60" fill="#318fda" opacity=".14"/><circle cx="498" cy="265" r="48" fill="none" stroke="#3a91ce" stroke-width="4" stroke-dasharray="10 8"/><rect x="416" y="67" width="344" height="100" rx="18" fill="#fff" opacity=".96" stroke="#c4d8e7" stroke-width="2"/><rect x="437" y="97" width="22" height="36" rx="5" fill="#d7eaf9" stroke="#286eae" stroke-width="3"/><path d="M445 125 h6 M466 105 q13 10 0 20 M473 98 q22 17 0 34" fill="none" stroke="#286eae" stroke-width="3" stroke-linecap="round"/><text x="490" y="109" fill="#286eae" font-family="Arial,sans-serif" font-size="17" font-weight="700">VOICE REQUEST</text><text x="490" y="135" fill="#526e85" font-family="Arial,sans-serif" font-size="14">Intent and urgency detected</text></g>
+</svg>

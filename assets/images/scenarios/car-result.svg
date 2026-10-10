@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="title desc">
+  <title id="title">Car breakdown - service suggestion</title>
+  <desc id="desc">A driver calls for help beside a broken car as a roadside mechanic arrives.</desc>
+  <rect width="800" height="500" fill="#d3ebfb"/>
+  <circle cx="685" cy="71" r="36" fill="#fff0ad"/>
+  <path d="M0 302 Q225 279 410 303 T800 297 V500 H0Z" fill="#d9ead6"/>
+  <path d="M0 360 H800 V500 H0Z" fill="#8497a9"/>
+  <path d="M0 417 H800" stroke="#f5f7f8" stroke-width="7" stroke-dasharray="46 28"/>
+  <path d="M125 322 Q166 270 218 268 H391 Q438 271 466 322 L498 341 V387 H103 V342Z" fill="#3b77a7" stroke="#244d70" stroke-width="6"/>
+  <path d="M191 281 H376 Q413 284 437 320 H158Z" fill="#b8deef" stroke="#2d5f83" stroke-width="5"/>
+  <path d="M283 281 V321" stroke="#46769a" stroke-width="5"/>
+  <path d="M110 328 L68 237 L77 227 L135 321" fill="#3b77a7" stroke="#244d70" stroke-width="6"/>
+  <circle cx="183" cy="388" r="37" fill="#27394e"/>
+  <circle cx="183" cy="388" r="18" fill="#c9d6df"/>
+  <circle cx="418" cy="388" r="37" fill="#27394e"/>
+  <circle cx="418" cy="388" r="18" fill="#c9d6df"/>
+  <path d="M475 354 h23" stroke="#ffe7a1" stroke-width="11" stroke-linecap="round"/>
+  <path d="M117 348 h20" stroke="#f1b7a2" stroke-width="10" stroke-linecap="round"/>
+  <g transform="translate(552 166)">
+    <circle cx="0" cy="24" r="20" fill="#9d684b"/>
+    <path d="M-19 14 q20 -22 39 0" fill="#263d51"/>
+    <path d="M-22 54 Q0 40 22 54 L28 139 H-29Z" fill="#e1a64c"/>
+    <path d="M-24 72 -50 111 M24 72 48 98" stroke="#9d684b" stroke-width="12" stroke-linecap="round"/>
+    <rect x="43" y="94" width="13" height="25" rx="3" fill="#334d65"/>
+    <path d="M-15 138 -19 205 M15 138 19 205" stroke="#293b53" stroke-width="15" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(692 167)">
+    <circle cx="0" cy="24" r="19" fill="#bd8058"/>
+    <path d="M-22 12 q23 -24 45 0" fill="#f4b942"/>
+    <path d="M-24 54 Q0 40 24 54 L29 139 H-29Z" fill="#266e9d"/>
+    <path d="M-25 70 -50 103 M25 70 45 100" stroke="#bd8058" stroke-width="11" stroke-linecap="round"/>
+    <path d="M-15 139 -19 205 M15 139 19 205" stroke="#283b53" stroke-width="15" stroke-linecap="round"/>
+    <rect x="-62" y="100" width="32" height="27" rx="4" fill="#f3b643" stroke="#95672c" stroke-width="3"/>
+  </g>
+  <rect x="474" y="78" width="225" height="58" rx="15" fill="#fff" stroke="#c9d9e7"/>
+  <text x="490" y="101" fill="#2d5479" font-family="Arial,sans-serif" font-size="16">“Mechanic kenek one!”</text>
+  <text x="490" y="121" fill="#98782d" font-family="Arial,sans-serif" font-size="11">ROADSIDE HELP</text>
+<g aria-hidden="true"><path d="M692 300 Q510 150 322 318" fill="none" stroke="#2a9d71" stroke-width="8" stroke-linecap="round" stroke-dasharray="13 9"/><circle cx="300" cy="310" r="33" fill="#e3f8e9" stroke="#2a9d71" stroke-width="5"/><path d="M287 310 l9 9 18-20" fill="none" stroke="#25825d" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><rect x="416" y="67" width="344" height="100" rx="18" fill="#fff" opacity=".96" stroke="#c4d8e7" stroke-width="2"/><circle cx="452" cy="115" r="23" fill="#d8f2e5" stroke="#25825d" stroke-width="3"/><path d="M440 114 l8 8 16-18" fill="none" stroke="#25825d" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><text x="490" y="109" fill="#25825d" font-family="Arial,sans-serif" font-size="17" font-weight="700">SERVICE SUGGESTION</text><text x="490" y="135" fill="#526e85" font-family="Arial,sans-serif" font-size="14">A suitable provider is identified</text></g>
+</svg>
