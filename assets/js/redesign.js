@@ -30,8 +30,8 @@ window.addEventListener('popstate',()=>navigate(decodeURIComponent(location.hash
 window.addEventListener('load',()=>{refreshHeaderHeight();if(location.hash)navigate(decodeURIComponent(location.hash.slice(1)),false);else markActive('home');});
 let frame=false;
 window.addEventListener('scroll',()=>{if(frame||performance.now()<scrollingUntil)return;frame=true;requestAnimationFrame(()=>{frame=false;let current='home';const threshold=(header?.offsetHeight||78)+40;for(const id of mainSections){const el=document.getElementById(id);if(el&&el.getBoundingClientRect().top<=threshold)current=id;}markActive(current);});},{passive:true});
-// On-campus/offline preview copies remain embedded; OneDrive is the source-of-truth online link.
-const documents={voice:{name:'Voice Intelligence Proposal',local:'docs/voice-proposal.pdf',onedrive:'https://mysliit-my.sharepoint.com/:b:/g/personal/it22175748_my_sliit_lk/IQCii3Zspf__T5PMBZZIk3BRAWv-9WzX7DTGAG5JSgDNHAU?e=xNwJ7J'},agent:{name:'Multi-Agent Coordination Proposal',local:'docs/multi-agent-proposal.pdf',onedrive:'https://mysliit-my.sharepoint.com/:b:/g/personal/it22175748_my_sliit_lk/IQBO_ABCcdtDRqkRNUf8CA4bAdAvhEjsdsoxJqUNIUFDO44?e=6TVfnJ'},workforce:{name:'Workforce Intelligence Proposal',local:'docs/workforce-proposal.pdf',onedrive:'https://mysliit-my.sharepoint.com/:b:/g/personal/it22175748_my_sliit_lk/IQBqUMq1LVj9QK-jFvZnZDwTARTdGYtkhlU3830JloX84-s?e=tH4Iqz'}};
+// Research documents and presentations open from OneDrive.
+const documents={voice:{name:'Voice Intelligence Proposal',onedrive:'https://mysliit-my.sharepoint.com/:b:/g/personal/it22175748_my_sliit_lk/IQCii3Zspf__T5PMBZZIk3BRAWv-9WzX7DTGAG5JSgDNHAU?e=xNwJ7J'},agent:{name:'Multi-Agent Coordination Proposal',onedrive:'https://mysliit-my.sharepoint.com/:b:/g/personal/it22175748_my_sliit_lk/IQBO_ABCcdtDRqkRNUf8CA4bAdAvhEjsdsoxJqUNIUFDO44?e=6TVfnJ'},workforce:{name:'Workforce Intelligence Proposal',onedrive:'https://mysliit-my.sharepoint.com/:b:/g/personal/it22175748_my_sliit_lk/IQBqUMq1LVj9QK-jFvZnZDwTARTdGYtkhlU3830JloX84-s?e=tH4Iqz'}};
 function selectLibraryItem(kind,key){
  const isDoc=kind==='document', data=isDoc?documents:slideData, entry=data[key];if(!entry)return;
  const prefix=isDoc?'document':'slide';
@@ -40,9 +40,7 @@ function selectLibraryItem(kind,key){
    b.classList.toggle('active',active);b.setAttribute('aria-pressed',String(active));
  });
  document.getElementById(prefix+'-title').textContent=entry.name;
- document.getElementById(prefix+'-frame').src=entry.local+'#toolbar=1';
  document.getElementById(prefix+'-open').href=entry.onedrive;
- document.getElementById(prefix+'-download').href=entry.local;
 }
 document.querySelectorAll('.doc-choice').forEach(b=>b.addEventListener('click',()=>selectLibraryItem('document',b.dataset.document)));
 const scenes={water:{file:'water.svg',name:'Water leak',quote:'“Ane plumber kenek one, pipe eka kadila, water yanawa!”',role:'plumber',problem:'A water pipe breaks at home. The resident needs urgent plumbing assistance.',urgency:'High'},car:{file:'car.svg',name:'Car breakdown',quote:'“Car eka start wenne na. Mechanic kenek ikmanata one!”',role:'mechanic',problem:'A car breaks down on the roadside. The driver needs help quickly.',urgency:'High'},electric:{file:'electric.svg',name:'Electrical repair',quote:'“Gedara switch eka wada karanne na. Electrician kenek one.”',role:'electrician',problem:'A household switch is not working. The resident needs a qualified electrician.',urgency:'Normal'}};
@@ -55,7 +53,7 @@ function render(){const x=scenes[selected];const frame=step===0?x.file:selected+
 function next(){step=(step+1)%5;render();}
 get('world-next')?.addEventListener('click',()=>{stop();next();});get('world-prev')?.addEventListener('click',()=>{stop();step=Math.max(0,step-1);render();});get('story-restart')?.addEventListener('click',()=>{stop();step=0;render();});document.querySelectorAll('[data-world]').forEach(b=>b.addEventListener('click',()=>{stop();selected=b.dataset.world;step=0;render();}));get('story-play')?.addEventListener('click',()=>{if(timer){stop();return;}get('story-play').textContent='Ⅱ Pause';next();timer=setInterval(next,3800);});document.addEventListener('visibilitychange',()=>{if(document.hidden)stop()});render();
 
-const slideData={proposal:{name:'Proposal Presentation',local:'docs/slides/proposal-presentation.pdf',onedrive:'https://mysliit-my.sharepoint.com/:b:/g/personal/it22175748_my_sliit_lk/IQAWT16xXdJ6T6NvZZzylrVKAfUnYOrsrdU-km5jge51VWg?e=bVqHnL'},pp1:{name:'Progress Presentation 1',local:'docs/slides/progress-presentation-1.pdf',onedrive:'https://mysliit-my.sharepoint.com/:b:/g/personal/it22175748_my_sliit_lk/IQBa1xWz9VjoS7X9EA0JDPJEAeMLVO_AEwzfMXIW4GtrCVw?e=kPvaYq'},pp2:{name:'Progress Presentation 2',local:'docs/slides/progress-presentation-2.pdf',onedrive:'https://mysliit-my.sharepoint.com/:b:/g/personal/it22175748_my_sliit_lk/IQCJLnlz6pUPRYvxmV22z40_AWfFaxUaqFAv1mp2yy_flNU?e=9xsjXC'}};
+const slideData={proposal:{name:'Proposal Presentation',onedrive:'https://mysliit-my.sharepoint.com/:b:/g/personal/it22175748_my_sliit_lk/IQAWT16xXdJ6T6NvZZzylrVKAfUnYOrsrdU-km5jge51VWg?e=bVqHnL'},pp1:{name:'Progress Presentation 1',onedrive:'https://mysliit-my.sharepoint.com/:b:/g/personal/it22175748_my_sliit_lk/IQBa1xWz9VjoS7X9EA0JDPJEAeMLVO_AEwzfMXIW4GtrCVw?e=kPvaYq'},pp2:{name:'Progress Presentation 2',onedrive:'https://mysliit-my.sharepoint.com/:b:/g/personal/it22175748_my_sliit_lk/IQCJLnlz6pUPRYvxmV22z40_AWfFaxUaqFAv1mp2yy_flNU?e=9xsjXC'}};
 document.querySelectorAll('.slide-choice').forEach(b=>b.addEventListener('click',()=>selectLibraryItem('slide',b.dataset.slide)));
 selectLibraryItem('document','voice');
 selectLibraryItem('slide','proposal');

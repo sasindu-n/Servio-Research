@@ -24,18 +24,17 @@ This project helps students communicate their research work in a format that can
 - Documents section with proposal previews and download links
 - Presentation and team information area
 - Clean academic visual style using HTML, CSS, and JavaScript
-- Local SVG and document assets for offline project presentation
+- Local SVG assets for offline project presentation
 
 ## Technologies Used
 - HTML5
 - CSS3
 - SVG illustrations
-- Local PDF files for research documentation
+- OneDrive links for research documents and presentations
 
 ## Project Structure
 - `index.html` – main landing page and website structure
 - `assets/` – CSS, JavaScript, images, and UI-related assets
-- `docs/` – supporting research documents and project files
 
 ## How to Run
 1. Open the project folder.
@@ -56,7 +55,7 @@ Important points to remember:
 ## Recommended Final Submission Checklist
 - Confirm all milestone dates and marks are correct
 - Add required project reports, charters, and slides when available
-- Verify all links and embedded PDF previews work properly
+- Verify all OneDrive links open for the intended audience
 - Test the site on the target devices and browsers
 - Check file size limits before submission
 - Ensure the project remains academically appropriate and professionally presented

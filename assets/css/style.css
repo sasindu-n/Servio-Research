@@ -1480,7 +1480,7 @@ main>section[id],.component-detail {
   display:grid;
   grid-template-columns:minmax(210px,290px) minmax(0,1fr);
   gap:16px;
-  min-height:590px
+  min-height:0
 }
 .library-menu,.library-view {
   background:#fff;
@@ -3011,4 +3011,39 @@ main>section[id],.component-detail,.milestone,.milestone-card {
   .research-abstract {
     font-size:.88rem
   }
+}
+
+/* OneDrive document library */
+.library-cloud-note {
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  min-height:260px;
+  padding:35px 24px;
+  text-align:center;
+  color:#526780;
+}
+.library-cloud-note>span {
+  display:grid;
+  place-items:center;
+  width:54px;
+  height:54px;
+  margin-bottom:12px;
+  border-radius:16px;
+  background:#e9f3ff;
+  color:#1c5b9b;
+  font-size:1.6rem;
+}
+.library-cloud-note h4 {
+  margin:0 0 6px;
+  color:#19365b;
+  font-size:1.05rem;
+}
+.library-cloud-note p {
+  max-width:340px;
+  margin:0;
+  line-height:1.55;
+  font-size:.88rem;
 }
