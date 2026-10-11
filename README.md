@@ -21,7 +21,7 @@ This project helps students communicate their research work in a format that can
 - Responsive layout for desktop and mobile viewing
 - Research domain and contribution sections
 - Milestone timeline for project progress
-- Documents section with proposal previews and download links
+- Documents and presentations sections with OneDrive link cards
 - Presentation and team information area
 - Clean academic visual style using HTML, CSS, and JavaScript
 - Local SVG assets for offline project presentation
@@ -48,7 +48,7 @@ Important points to remember:
 - The content is mainly informational and presentation-focused.
 - Research storytelling and visuals are meant to explain the concept clearly.
 - Any document links must be checked and verified before final submission.
-- OneDrive or external file embedding may fail depending on access permissions, so public-access sharing and testing are required.
+- OneDrive links may require sign-in or sharing permission, so test each link with the intended audience.
 - Confidential or private documents should never be publicly exposed.
 - Final submission should include official milestone dates, updated reports, and any required university documents.
 

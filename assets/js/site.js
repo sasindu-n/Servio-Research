@@ -1,3 +1,4 @@
+// Navigation and research story controls.
 const nav=document.querySelector('.links');
 const menu=document.querySelector('.menu-btn');
 const header=document.querySelector('.site-header');
@@ -17,7 +18,7 @@ function navigate(id,writeHistory=true){
   const headerHeight=Math.ceil(header?.getBoundingClientRect().height||78);
   const section=mainSections.includes(id);
   const heading=section?target.querySelector('.section-heading, .compact-hero-copy, .intro, h1, h2'):null;
-  const destination=(id==='home'||id==='top')?0:(heading||target).getBoundingClientRect().top+window.scrollY-headerHeight-16;
+  const destination=id==='home'?0:(heading||target).getBoundingClientRect().top+window.scrollY-headerHeight-16;
   const top=Math.max(0,Math.round(destination));
   scrollingUntil=performance.now()+650;
   window.scrollTo({top,behavior:'instant'});
@@ -30,19 +31,6 @@ window.addEventListener('popstate',()=>navigate(decodeURIComponent(location.hash
 window.addEventListener('load',()=>{refreshHeaderHeight();if(location.hash)navigate(decodeURIComponent(location.hash.slice(1)),false);else markActive('home');});
 let frame=false;
 window.addEventListener('scroll',()=>{if(frame||performance.now()<scrollingUntil)return;frame=true;requestAnimationFrame(()=>{frame=false;let current='home';const threshold=(header?.offsetHeight||78)+40;for(const id of mainSections){const el=document.getElementById(id);if(el&&el.getBoundingClientRect().top<=threshold)current=id;}markActive(current);});},{passive:true});
-// Research documents and presentations open from OneDrive.
-const documents={voice:{name:'Voice Intelligence Proposal',onedrive:'https://mysliit-my.sharepoint.com/:b:/g/personal/it22175748_my_sliit_lk/IQCii3Zspf__T5PMBZZIk3BRAWv-9WzX7DTGAG5JSgDNHAU?e=xNwJ7J'},agent:{name:'Multi-Agent Coordination Proposal',onedrive:'https://mysliit-my.sharepoint.com/:b:/g/personal/it22175748_my_sliit_lk/IQBO_ABCcdtDRqkRNUf8CA4bAdAvhEjsdsoxJqUNIUFDO44?e=6TVfnJ'},workforce:{name:'Workforce Intelligence Proposal',onedrive:'https://mysliit-my.sharepoint.com/:b:/g/personal/it22175748_my_sliit_lk/IQBqUMq1LVj9QK-jFvZnZDwTARTdGYtkhlU3830JloX84-s?e=tH4Iqz'}};
-function selectLibraryItem(kind,key){
- const isDoc=kind==='document', data=isDoc?documents:slideData, entry=data[key];if(!entry)return;
- const prefix=isDoc?'document':'slide';
- document.querySelectorAll(isDoc?'.doc-choice':'.slide-choice').forEach(b=>{
-   const active=(isDoc?b.dataset.document:b.dataset.slide)===key;
-   b.classList.toggle('active',active);b.setAttribute('aria-pressed',String(active));
- });
- document.getElementById(prefix+'-title').textContent=entry.name;
- document.getElementById(prefix+'-open').href=entry.onedrive;
-}
-document.querySelectorAll('.doc-choice').forEach(b=>b.addEventListener('click',()=>selectLibraryItem('document',b.dataset.document)));
 const scenes={water:{file:'water.svg',name:'Water leak',quote:'“Ane plumber kenek one, pipe eka kadila, water yanawa!”',role:'plumber',problem:'A water pipe breaks at home. The resident needs urgent plumbing assistance.',urgency:'High'},car:{file:'car.svg',name:'Car breakdown',quote:'“Car eka start wenne na. Mechanic kenek ikmanata one!”',role:'mechanic',problem:'A car breaks down on the roadside. The driver needs help quickly.',urgency:'High'},electric:{file:'electric.svg',name:'Electrical repair',quote:'“Gedara switch eka wada karanne na. Electrician kenek one.”',role:'electrician',problem:'A household switch is not working. The resident needs a qualified electrician.',urgency:'Normal'}};
 const headings=['A real person needs help','The user speaks naturally','The AI evaluates nearby providers','Fair opportunities and provider trust','A suitable provider is recommended'];
 const phase=['REAL-WORLD PROBLEM','VOICE INTELLIGENCE','MULTI-AGENT COORDINATION','WORKFORCE INTELLIGENCE','RESEARCH OUTCOME'];
@@ -52,8 +40,3 @@ function stop(){if(timer){clearInterval(timer);timer=null;}get('story-play').tex
 function render(){const x=scenes[selected];const frame=step===0?x.file:selected+'-'+sceneFrames[step]+'.svg';get('world-image').src='assets/images/scenarios/'+frame;get('world-image').alt='Illustration of '+x.name+' during '+phase[step].toLowerCase();get('world-phase').textContent=String(step+1).padStart(2,'0')+' / 05 · '+phase[step];get('world-title').textContent=headings[step];get('world-quote').textContent=x.quote;const details=[x.problem,'Component 01 interprets the mixed-language request and estimates urgency: '+x.urgency+'.','Component 02 coordinates provider search, context, travel feasibility, availability and adaptive ranking.','Component 03 provides reputation and fair opportunity information for suitable workers.','The research proposes a context-sensitive '+x.role+' recommendation. This is an illustrative result, not a booking.'];get('world-detail').textContent=details[step];get('world-contribution').textContent=['Real-life Sri Lankan service problem','01 · Voice intelligence','02 · Multi-agent coordination','03 · Workforce intelligence','Integrated research outcome'][step];get('world-visual-label').textContent=[x.name+' · A resident needs help','Speech request understood · '+x.urgency+' urgency','Searching and evaluating possible '+x.role+'s','Considering worker trust and fair opportunities','Suitable '+x.role+' suggested'][step];get('world-prev').disabled=step===0;get('world-next').textContent=step===4?'↺ Replay':'Next scene →';document.querySelectorAll('#world-stepper span').forEach((s,i)=>s.classList.toggle('selected',i===step));document.querySelectorAll('[data-world]').forEach(b=>{b.classList.toggle('active',b.dataset.world===selected);b.setAttribute('aria-pressed',String(b.dataset.world===selected));});get('research-sim').dataset.stage=String(step);}
 function next(){step=(step+1)%5;render();}
 get('world-next')?.addEventListener('click',()=>{stop();next();});get('world-prev')?.addEventListener('click',()=>{stop();step=Math.max(0,step-1);render();});get('story-restart')?.addEventListener('click',()=>{stop();step=0;render();});document.querySelectorAll('[data-world]').forEach(b=>b.addEventListener('click',()=>{stop();selected=b.dataset.world;step=0;render();}));get('story-play')?.addEventListener('click',()=>{if(timer){stop();return;}get('story-play').textContent='Ⅱ Pause';next();timer=setInterval(next,3800);});document.addEventListener('visibilitychange',()=>{if(document.hidden)stop()});render();
-
-const slideData={proposal:{name:'Proposal Presentation',onedrive:'https://mysliit-my.sharepoint.com/:b:/g/personal/it22175748_my_sliit_lk/IQAWT16xXdJ6T6NvZZzylrVKAfUnYOrsrdU-km5jge51VWg?e=bVqHnL'},pp1:{name:'Progress Presentation 1',onedrive:'https://mysliit-my.sharepoint.com/:b:/g/personal/it22175748_my_sliit_lk/IQBa1xWz9VjoS7X9EA0JDPJEAeMLVO_AEwzfMXIW4GtrCVw?e=kPvaYq'},pp2:{name:'Progress Presentation 2',onedrive:'https://mysliit-my.sharepoint.com/:b:/g/personal/it22175748_my_sliit_lk/IQCJLnlz6pUPRYvxmV22z40_AWfFaxUaqFAv1mp2yy_flNU?e=9xsjXC'}};
-document.querySelectorAll('.slide-choice').forEach(b=>b.addEventListener('click',()=>selectLibraryItem('slide',b.dataset.slide)));
-selectLibraryItem('document','voice');
-selectLibraryItem('slide','proposal');
